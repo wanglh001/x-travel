@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>泰国 · 曼谷 + 普吉岛 · 2025年5月</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f5f5f7;
+      --surface: #ffffff;
+      --surface-2: #f5f5f7;
+      --surface-3: #e8e8ed;
+      --label: #1d1d1f;
+      --label-2: #6e6e73;
+      --label-3: #aeaeb2;
+      --accent: #007aff;
+      --accent-warm: #ff9500;
+      --accent-teal: #30b0c7;
+      --accent-green: #34c759;
+      --accent-red: #ff3b30;
+      --separator: rgba(0,0,0,0.08);
+      --r-card: 20px;
+      --r-inner: 12px;
+      --shadow: 0 2px 20px rgba(0,0,0,0.07), 0 1px 4px rgba(0,0,0,0.04);
+      --shadow-lg: 0 10px 40px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06);
+      --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #000;
+        --surface: #1c1c1e;
+        --surface-2: #2c2c2e;
+        --surface-3: #3a3a3c;
+        --label: #f5f5f7;
+        --label-2: #aeaeb2;
+        --label-3: #636366;
+        --separator: rgba(255,255,255,0.1);
+        --shadow: 0 2px 20px rgba(0,0,0,0.4);
+        --shadow-lg: 0 10px 40px rgba(0,0,0,0.6);
+      }
+    }
+
+    html {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--label);
+      -webkit-font-smoothing: antialiased;
+      scroll-behavior: smooth;
+    }
+
+    /* ─── Nav ──────────────────────────────────── */
+    .nav {
+      position: sticky; top: 0; z-index: 200;
+      background: rgba(245,245,247,0.88);
+      backdrop-filter: saturate(180%) blur(20px);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      border-bottom: 1px solid var(--separator);
+    }
+    @media (prefers-color-scheme: dark) { .nav { background: rgba(0,0,0,0.88); } }
+    .nav-inner {
+      max-width: 1024px; margin: 0 auto;
+      padding: 0 24px; height: 52px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-back {
+      font-size: 15px; font-weight: 500; color: var(--accent);
+      text-decoration: none; display: flex; align-items: center; gap: 4px;
+    }
+    .nav-back svg { width: 16px; height: 16px; }
+    .nav-title { font-size: 15px; font-weight: 600; letter-spacing: -0.01em; }
+    .nav-meta { font-size: 13px; color: var(--label-2); }
+
+    /* ─── Hero ─────────────────────────────────── */
+    .hero {
+      position: relative; overflow: hidden;
+      min-height: 480px;
+      display: flex; align-items: flex-end;
+      padding: 0 24px 56px;
+      background:
+        linear-gradient(175deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.72) 100%),
+        linear-gradient(135deg, #0096c7 0%, #023e8a 30%, #1b4332 60%, #f77f00 100%);
+    }
+    .hero-pattern {
+      position: absolute; inset: 0; opacity: 0.18;
+      background-image:
+        radial-gradient(circle at 20% 50%, #fff 1px, transparent 1px),
+        radial-gradient(circle at 80% 20%, #fff 1px, transparent 1px),
+        radial-gradient(circle at 50% 80%, #fff 1px, transparent 1px);
+      background-size: 60px 60px, 80px 80px, 50px 50px;
+    }
+    .hero-emoji {
+      position: absolute; top: 40px; right: 32px;
+      font-size: 80px; opacity: 0.35;
+      user-select: none; pointer-events: none;
+      filter: drop-shadow(0 8px 24px rgba(0,0,0,0.3));
+    }
+    .hero-content { position: relative; z-index: 1; max-width: 1024px; width: 100%; margin: 0 auto; }
+    .hero-eyebrow {
+      font-size: 13px; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: rgba(255,255,255,0.7);
+      margin-bottom: 12px;
+    }
+    .hero-title {
+      font-size: clamp(36px, 6vw, 64px);
+      font-weight: 700; letter-spacing: -0.03em; line-height: 1.05;
+      color: #fff; margin-bottom: 14px;
+    }
+    .hero-subtitle { font-size: 18px; color: rgba(255,255,255,0.8); margin-bottom: 24px; }
+    .hero-badges { display: flex; flex-wrap: wrap; gap: 8px; }
+    .hero-badge {
+      font-size: 13px; font-weight: 500;
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(8px);
+      color: #fff; padding: 5px 14px;
+      border-radius: 100px;
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+
+    /* ─── Layout ────────────────────────────────── */
+    .main { max-width: 1024px; margin: 0 auto; padding: 48px 24px 96px; }
+
+    /* ─── Overview strip ─────────────────────────── */
+    .overview-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 48px;
+    }
+    .overview-item {
+      background: var(--surface);
+      border-radius: var(--r-card);
+      box-shadow: var(--shadow);
+      padding: 20px 18px;
+      display: flex; flex-direction: column; gap: 6px;
+    }
+    .overview-icon { font-size: 22px; margin-bottom: 2px; }
+    .overview-label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; color: var(--label-2); }
+    .overview-value { font-size: 16px; font-weight: 700; letter-spacing: -0.02em; }
+    .overview-sub { font-size: 12px; color: var(--label-2); }
+
+    /* ─── Section ────────────────────────────────── */
+    .section { margin-bottom: 48px; }
+    .section-title {
+      font-size: 22px; font-weight: 700; letter-spacing: -0.02em;
+      margin-bottom: 20px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .section-title-icon { font-size: 22px; }
+
+    /* ─── Timeline ────────────────────────────────── */
+    .timeline { display: flex; flex-direction: column; gap: 16px; }
+    .day-card {
+      background: var(--surface);
+      border-radius: var(--r-card);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .day-header {
+      display: flex; align-items: center; gap: 16px;
+      padding: 18px 24px;
+      cursor: pointer;
+      user-select: none;
+      border-bottom: 1px solid transparent;
+      transition: background 0.15s;
+    }
+    .day-header:hover { background: var(--surface-2); }
+    .day-header.open { border-bottom: 1px solid var(--separator); }
+    .day-number {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 700;
+      flex-shrink: 0;
+    }
+    .day-date { font-size: 13px; color: var(--label-2); margin-bottom: 2px; }
+    .day-title { font-size: 16px; font-weight: 700; letter-spacing: -0.01em; }
+    .day-tag {
+      margin-left: auto;
+      font-size: 12px; font-weight: 500;
+      padding: 3px 10px; border-radius: 100px;
+    }
+    .day-chevron {
+      width: 20px; height: 20px; color: var(--label-3);
+      transition: transform 0.2s;
+    }
+    .day-header.open .day-chevron { transform: rotate(90deg); }
+    .day-body {
+      display: none;
+      padding: 24px;
+    }
+    .day-body.open { display: block; }
+
+    /* Day body content */
+    .day-section { margin-bottom: 20px; }
+    .day-section:last-child { margin-bottom: 0; }
+    .day-section-label {
+      font-size: 12px; font-weight: 700; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--label-2);
+      margin-bottom: 10px;
+    }
+    .activity-list { display: flex; flex-direction: column; gap: 10px; }
+    .activity-item {
+      display: flex; gap: 14px;
+      align-items: flex-start;
+    }
+    .activity-time {
+      font-size: 12px; font-weight: 600;
+      color: var(--label-3); width: 48px;
+      flex-shrink: 0; padding-top: 2px;
+    }
+    .activity-content { flex: 1; }
+    .activity-name {
+      font-size: 15px; font-weight: 600; letter-spacing: -0.01em;
+      margin-bottom: 4px;
+    }
+    .activity-desc { font-size: 13px; color: var(--label-2); line-height: 1.5; }
+    .activity-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      flex-shrink: 0; margin-top: 6px;
+    }
+
+    .tip-box {
+      background: var(--surface-2);
+      border-radius: var(--r-inner);
+      padding: 14px 16px;
+      font-size: 13px; color: var(--label-2); line-height: 1.6;
+      border-left: 3px solid var(--accent);
+    }
+    .tip-box strong { color: var(--label); }
+
+    /* ─── Food grid ────────────────────────────────── */
+    .food-section { display: flex; flex-direction: column; gap: 24px; }
+    .food-city-title {
+      font-size: 15px; font-weight: 700; letter-spacing: -0.01em;
+      color: var(--label-2); margin-bottom: 12px;
+    }
+    .food-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+    }
+    .food-card {
+      background: var(--surface);
+      border-radius: var(--r-card);
+      box-shadow: var(--shadow);
+      padding: 18px 16px;
+    }
+    .food-emoji { font-size: 28px; margin-bottom: 10px; }
+    .food-name { font-size: 15px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 4px; }
+    .food-name-th { font-size: 12px; color: var(--label-2); margin-bottom: 6px; }
+    .food-where { font-size: 12px; color: var(--label-2); }
+    .food-price {
+      display: inline-block; margin-top: 8px;
+      font-size: 12px; font-weight: 600;
+      background: var(--surface-2); color: var(--label-2);
+      padding: 2px 8px; border-radius: 100px;
+    }
+
+    /* ─── Tips grid ──────────────────────────────── */
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .tips-card {
+      background: var(--surface);
+      border-radius: var(--r-card);
+      box-shadow: var(--shadow);
+      padding: 22px 20px;
+    }
+    .tips-icon { font-size: 24px; margin-bottom: 12px; }
+    .tips-title { font-size: 15px; font-weight: 700; margin-bottom: 10px; }
+    .tips-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+    .tips-list li {
+      font-size: 13px; color: var(--label-2); line-height: 1.5;
+      padding-left: 16px; position: relative;
+    }
+    .tips-list li::before {
+      content: '·'; position: absolute; left: 4px; color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* ─── Photo spots ─────────────────────────────── */
+    .spots-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 14px;
+    }
+    .spot-card {
+      background: var(--surface);
+      border-radius: var(--r-card);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      display: flex; flex-direction: column;
+    }
+    .spot-cover {
+      height: 120px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 48px;
+    }
+    .spot-body { padding: 16px; }
+    .spot-name { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .spot-time { font-size: 12px; color: var(--accent); font-weight: 600; margin-bottom: 6px; }
+    .spot-desc { font-size: 12px; color: var(--label-2); line-height: 1.5; }
+
+    /* ─── Color helpers ──────────────────────────── */
+    .c-blue   { background: #007aff; color: #fff; }
+    .c-teal   { background: #30b0c7; color: #fff; }
+    .c-green  { background: #34c759; color: #fff; }
+    .c-orange { background: #ff9500; color: #fff; }
+    .c-purple { background: #af52de; color: #fff; }
+    .c-pink   { background: #ff2d55; color: #fff; }
+    .c-indigo { background: #5856d6; color: #fff; }
+    .c-gray   { background: var(--surface-3); color: var(--label-2); }
+
+    .tag-blue   { background: rgba(0,122,255,0.12); color: #007aff; }
+    .tag-teal   { background: rgba(48,176,199,0.12); color: #30b0c7; }
+    .tag-green  { background: rgba(52,199,89,0.12); color: #34c759; }
+    .tag-orange { background: rgba(255,149,0,0.12); color: #ff9500; }
+    .tag-purple { background: rgba(175,82,222,0.12); color: #af52de; }
+    .tag-pink   { background: rgba(255,45,85,0.12); color: #ff2d55; }
+    .tag-indigo { background: rgba(88,86,214,0.12); color: #5856d6; }
+
+    .dot-blue   { background: #007aff; }
+    .dot-teal   { background: #30b0c7; }
+    .dot-green  { background: #34c759; }
+    .dot-orange { background: #ff9500; }
+    .dot-purple { background: #af52de; }
+    .dot-gray   { background: var(--label-3); }
+
+    /* ─── Footer ─────────────────────────────────── */
+    .footer {
+      border-top: 1px solid var(--separator);
+      padding: 40px 24px;
+      text-align: center;
+    }
+    .footer-inner { max-width: 1024px; margin: 0 auto; }
+    .footer p { font-size: 13px; color: var(--label-3); line-height: 1.8; }
+
+    /* ─── Responsive ──────────────────────────────── */
+    @media (max-width: 768px) {
+      .overview-strip { grid-template-columns: repeat(2, 1fr); }
+      .hero { min-height: 360px; padding: 0 20px 44px; }
+      .hero-emoji { font-size: 56px; top: 28px; right: 20px; }
+      .main { padding: 32px 20px 72px; }
+      .nav-meta { display: none; }
+    }
+    @media (max-width: 480px) {
+      .overview-strip { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .food-grid { grid-template-columns: repeat(2, 1fr); }
+      .spots-grid { grid-template-columns: 1fr; }
+      .tips-grid { grid-template-columns: 1fr; }
+      .day-header { padding: 16px 18px; }
+      .day-body { padding: 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../../docs/index.html" class="nav-back">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M10 12L6 8l4-4"/>
+        </svg>
+        x-travel
+      </a>
+      <span class="nav-title">泰国 · 曼谷 & 普吉岛</span>
+      <span class="nav-meta">2025年5月</span>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-pattern"></div>
+    <span class="hero-emoji">🏖️</span>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Thailand · May 2025</p>
+      <h1 class="hero-title">曼谷 + 普吉岛</h1>
+      <p class="hero-subtitle">文化探索 · 街头美食 · 潜水体验 · 慢游九天</p>
+      <div class="hero-badges">
+        <span class="hero-badge">📅 5月2日 — 5月10日</span>
+        <span class="hero-badge">👥 2人同行</span>
+        <span class="hero-badge">🤿 PADI AOW</span>
+        <span class="hero-badge">🌧 雨季初期</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Overview -->
+    <div class="overview-strip">
+      <div class="overview-item">
+        <div class="overview-icon">🗓️</div>
+        <div class="overview-label">行程时长</div>
+        <div class="overview-value">9 天</div>
+        <div class="overview-sub">5月2日 — 5月10日</div>
+      </div>
+      <div class="overview-item">
+        <div class="overview-icon">📍</div>
+        <div class="overview-label">目的地</div>
+        <div class="overview-value">2 城市</div>
+        <div class="overview-sub">曼谷 + 普吉岛</div>
+      </div>
+      <div class="overview-item">
+        <div class="overview-icon">🏨</div>
+        <div class="overview-label">住宿</div>
+        <div class="overview-value">双子塔</div>
+        <div class="overview-sub">Mazi Hostel · 普吉</div>
+      </div>
+      <div class="overview-item">
+        <div class="overview-icon">🤿</div>
+        <div class="overview-label">潜水计划</div>
+        <div class="overview-value">PADI AOW</div>
+        <div class="overview-sub">5月6日 — 7日</div>
+      </div>
+    </div>
+
+    <!-- Itinerary -->
+    <section class="section">
+      <h2 class="section-title">
+        <span class="section-title-icon">🗺️</span>
+        每日行程
+      </h2>
+
+      <div class="timeline">
+
+        <!-- Day 0 -->
+        <div class="day-card">
+          <div class="day-header open" onclick="toggleDay(this)">
+            <div class="day-number c-blue">D0</div>
+            <div>
+              <div class="day-date">5月2日（周五）</div>
+              <div class="day-title">飞抵曼谷 · 朱拉隆功夜市开胃</div>
+            </div>
+            <span class="day-tag tag-blue">曼谷</span>
+            <svg class="day-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 4l4 4-4 4"/>
+            </svg>
+          </div>
+          <div class="day-body open">
+            <div class="activity-list">
+              <div class="activity-item">
+                <div class="activity-time">11:05</div>
+                <div class="activity-dot dot-blue"></div>
+                <div class="activity-content">
+                  <div class="activity-name">北京大兴机场出发</div>
+                  <div class="activity-desc">中转厦门，停留约2.5小时</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-time">18:55</div>
+                <div class="activity-dot dot-blue"></div>
+                <div class="activity-content">
+                  <div class="activity-name">抵达曼谷素万那普机场</div>
+                  <div class="activity-desc">打 Grab 前往双子塔酒店（约45分钟，300–400泰铢）</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-time">21:00</div>
+                <div class="activity-dot dot-orange"></div>
+                <div class="activity-content">
+                  <div class="activity-name">🍜 朱拉隆功夜市（Sam Yan Mitr Town）</div>
+                  <div class="activity-desc">正宗本地人夜市，远离游客区。必吃：泰式烤串、冬阴功汤面、炸鸡、芒果冰沙。约 17:00–22:00 营业。</div>
+                </div>
+              </div>
+            </div>
+            <div style="margin-top:16px">
+              <div class="tip-box">
+                <strong>Tips：</strong>首日时差调整，不建议安排太多。夜市逛完回酒店早休息，第二天精力充沛逛市集。
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 1 -->
+        <div class="day-card">
+          <div class="day-header" onclick="toggleDay(this)">
+            <div class="day-number c-blue">D1</div>
+            <div>
+              <div class="day-date">5月3日（周六）</div>
+              <div class="day-title">乍都乍市集 · 暹罗商圈 · 四面佛</div>
+            </div>
+            <span class="day-tag tag-blue">曼谷</span>
+            <svg class="day-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 4l4 4-4 4"/>
+            </svg>
+          </div>
+          <div class="day-body">
+            <div class="activity-list">
+              <div class="activity-item">
+                <div class="activity-time">09:00</div>
+                <div class="activity-dot dot-orange"></div>
+                <div class="activity-content">
+                  <div class="activity-name">🛍️ 乍都乍周末市场（Chatuchak Weekend Market）</div>
+                  <div class="activity-desc">全球最大跳蚤市场之一，仅周六周日开放。BTS Mo Chit 站步行即达。重点逛：第2–4区（古董工艺品）、第8–10区（伴手礼服装）、第27区附近（美食区）。建议停留3–4小时。</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-time">13:00</div>
+                <div class="activity-dot dot-blue"></div>
+                <div class="activity-content">
+                  <div class="activity-name">🏬 暹罗商圈 Citywalk</div>
+                  <div class="activity-desc">以 BTS Siam 站为中心步行覆盖：Central World（双子塔）· Siam Paragon · MBK Center · Siam Square 街头潮流区</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-time">17:00</div>
+                <div class="activity-dot dot-orange"></div>
+                <div class="activity-content">
+                  <div class="activity-name">🙏 四面佛（Erawan Shrine）</div>
+                  <div class="activity-desc">亚洲最灵验许愿地之一，距 Central World 步行5分钟。泰国传统舞蹈表演时常举行，拍照氛围感极佳。免费参观，06:00–23:00 开放。</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-time">19:00</div>
+                <div class="activity-dot dot-orange"></div>
+                <div class="activity-content">
+                  <div class="activity-name">🌃 晚餐 · Red Sky Bar（Centara Grand 55F）</div>
+                  <div class="activity-desc">酒店顶层空中酒吧，夜景绝佳。或前往 After You Dessert Café 吃网红蜜糖吐司，再在 Mango Tango 收尾芒果糯米饭。</div>
+                </div>
+              </div>
+            </div>
+            <div style="margin-top:16px">
+              <div class="tip-box">
+                <strong>Tips：</strong>五一旺季乍都乍人超多，建议 10:00 前到场避高峰。准备好防晒和帽子，市场日晒强烈。
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 2 -->
+        <div class="day-card">
+          <div class="day-header" onclick="toggleDay(this)">
+            <div class="day-number c-indigo">D2</div>
+            <div>
+              <div class="day-date">5月4日（周日）</div>
+              <div class="day-title">寺庙文化深游 · JODD FAIRS 夜市</div>
+            </div>
+            <span class="day-tag tag-indigo">曼谷</span>
+            <svg class="day-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 4l4 4-4 4"/>
+            </svg>
+          </div>
+          <div class="day-body">
+            <div class="activity-list">
+              <div class="activity-item">
+                <div class="activity-time">09:00</div>
+                <div class="activity-dot dot-blue"></div>
+                <div class="activity-content">
+                  <div class="activity-name">🏯 大皇宫 & 玉佛寺（Grand Palace）</div>
+                  <div class="activity-desc">1782年建成，历代泰王王宫，金碧辉煌。玉佛寺供奉整块翡翠雕成的玉佛，泰国最神圣寺庙。门票500泰铢（含卧佛寺），需遮肩遮腿。建议游览2–3小时。</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-time">11:30</div>
+                <div class="activity-dot dot-teal"></div>
+                <div class="activity-content">
+                  <div class="activity-name">🛕 卧佛寺（Wat Pho）</div>
+                  <div class="activity-desc">46米长贴金卧佛，气势磅礴。寺内有正规泰式按摩学校（约420泰铢/小时，强烈推荐！）。步行5分钟自大皇宫。</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-time">13:30</div>
+                <div class="activity-dot dot-teal"></div>
+                <div class="activity-content">
+                  <div class="activity-name">⛵ 渡船 → 郑王庙（Wat Arun）</div>
+                  <div class="activity-desc">湄南河西岸，从 Tha Tien 码头坐渡船（3泰铢）。碎瓷片镶嵌的黎明神庙，日落前光线最美。门票100泰铢。建议游览1.5小时。</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-time">15:30</div>
+                <div class="activity-dot dot-orange"></div>
+                <div class="activity-content">
+                  <div class="activity-name">⛰️ 水门寺金色大佛（Wat Saket · 金山寺）</div>
+                  <div class="activity-desc">318级台阶登顶，俯瞰曼谷老城区全景。大城王朝遗迹，据说供奉释迦牟尼舍利子。日落后灯光亮起氛围绝美。门票100泰铢。</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-time">18:00</div>
+                <div class="activity-dot dot-orange"></div>
+                <div class="activity-content">
+                  <div class="activity-name">🎪 JODD FAIRS 夜市（乔德 · 拉差达）</div>
+                  <div class="activity-desc">曼谷最火网红夜市，彩色帐篷超出片。必吃：Pad Thai · 芒果糯米饭 · 芝士烤生蚝 · 猪脚饭 · 椰子冰淇淋。约 17:00–00:00 营业。</div>
+                </div>
+              </div>
+            </div>
+            <div style="margin-top:16px">
+              <div class="tip-box">
+                <strong>摄影提示：</strong>黄昏时在湄南河东岸对望郑王庙是绝佳机位，夕阳打光极好；登金山寺最佳时间 17:00–18:00，夜景迷人。
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 3 -->
+        <div class="day-card">
+          <div class="day-header" onclick="toggleDay(this)">
+            <div class="day-number c-teal">D3</div>
+            <div>
+              <div class="day-date">5月5日（周一）</div>
+              <div class="day-title">曼谷 → 普吉岛 · 芭东探索</div>
+            </div>
+            <span class="day-tag tag-teal">转场</span>
+            <svg class="day-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 4l4 4-4 4"/>
+            </svg>
+          </div>
+          <div class="day-body">
+            <div class="activity-list">
+              <div class="activity-item">
+                <div class="activity-time">上午</div>
+                <div class="activity-dot dot-gray"></div>
+                <div class="activity-content">
+                  <div class="activity-name">🛒 Central World 补购 & 退房</div>
+                  <div class="activity-desc">超市（B1）买泰国零食伴手礼：芒果干、泰式薯片、榴莲糖等。</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-time">11:00</div>
+                <div class="activity-dot dot-teal"></div>
+                <div class="activity-content">
+                  <div class="activity-name">🚗 前往廊曼机场（Don Mueang, DMK）</div>
+                  <div class="activity-desc">注意：廊曼机场 ≠ 素万那普机场，打 Grab 约45分钟。务必预留充足时间。</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-time">13:05</div>
+                <div class="activity-dot dot-teal"></div>
+                <div class="activity-content">
+                  <div class="activity-name">✈️ 飞往普吉岛（HKT）</div>
+                  <div class="activity-desc">飞行约1.5小时，14:30 抵达</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-time">15:30</div>
+                <div class="activity-dot dot-teal"></div>
+                <div class="activity-content">
+                  <div class="activity-name">🏨 入住 Mazi Design Hostel by Kalima</div>
+                  <div class="activity-desc">芭东海滩区，设计感青旅。打 Grab 从机场约40分钟（500–700泰铢）。</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-time">17:00</div>
+                <div class="activity-dot dot-orange"></div>
+                <div class="activity-content">
+                  <div class="activity-name">🌊 芭东海滩 & 周边探索</div>
+                  <div class="activity-desc">海边散步、看落日（普吉岛西侧日落极美）。晚餐推荐 Sabai Corner 本地海鲜餐厅。</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 4-5 -->
+        <div class="day-card">
+          <div class="day-header" onclick="toggleDay(this)">
+            <div class="day-number c-teal">D4–5</div>
+            <div>
+              <div class="day-date">5月6–7日（周二、三）</div>
+              <div class="day-title">PADI AOW 潜水课程</div>
+            </div>
+            <span class="day-tag tag-teal">普吉岛</span>
+            <svg class="day-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 4l4 4-4 4"/>
+            </svg>
+          </div>
+          <div class="day-body">
+            <div class="activity-list">
+              <div class="activity-item">
+                <div class="activity-time">D4</div>
+                <div class="activity-dot dot-teal"></div>
+                <div class="activity-content">
+                  <div class="activity-name">🤿 AOW 第1天</div>
+                  <div class="activity-desc">深潜 Adventure Dive（最深40m）+ 水下导航 Adventure Dive（两项必选）</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-time">D5</div>
+                <div class="activity-dot dot-teal"></div>
+                <div class="activity-content">
+                  <div class="activity-name">🤿 AOW 第2天</div>
+                  <div class="activity-desc">3个选择性 Adventure Dives — 推荐：船潜 + 水下摄影 + 夜潜（夜潜体验感极佳）</div>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top:16px; margin-bottom:16px">
+              <div class="day-section-label">推荐普吉岛潜点</div>
+              <div style="display:grid; grid-template-columns: repeat(2,1fr); gap:10px; margin-top:8px">
+                <div style="background:var(--surface-2); border-radius:12px; padding:14px 14px">
+                  <div style="font-size:14px; font-weight:700; margin-bottom:4px">🦈 Shark Point</div>
+                  <div style="font-size:12px; color:var(--label-2)">豹纹鲨 · 彩色珊瑚礁 · 12–26m</div>
+                </div>
+                <div style="background:var(--surface-2); border-radius:12px; padding:14px 14px">
+                  <div style="font-size:14px; font-weight:700; margin-bottom:4px">🌸 Anemone Reef</div>
+                  <div style="font-size:12px; color:var(--label-2)">海葵覆盖 · 小丑鱼 · 16–26m</div>
+                </div>
+                <div style="background:var(--surface-2); border-radius:12px; padding:14px 14px">
+                  <div style="font-size:14px; font-weight:700; margin-bottom:4px">🚢 King Cruiser</div>
+                  <div style="font-size:12px; color:var(--label-2)">1997年沉船 · 鱼群密集 · 16–32m</div>
+                </div>
+                <div style="background:var(--surface-2); border-radius:12px; padding:14px 14px">
+                  <div style="font-size:14px; font-weight:700; margin-bottom:4px">🐠 Racha Yai</div>
+                  <div style="font-size:12px; color:var(--label-2)">能见度高 · 适合导航练习 · 8–22m</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tip-box">
+              <strong>重要提示：</strong>AOW 课程结束后 18小时内不可乘飞机（减压病风险）。5/7 结束课程，5/9 坐飞机，时间充足安全。潜水前禁酒精，保证睡眠。
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 6 -->
+        <div class="day-card">
+          <div class="day-header" onclick="toggleDay(this)">
+            <div class="day-number c-teal">D6</div>
+            <div>
+              <div class="day-date">5月8日（周四）</div>
+              <div class="day-title">皮皮岛 & Maya Bay 一日出海游</div>
+            </div>
+            <span class="day-tag tag-teal">普吉岛</span>
+            <svg class="day-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 4l4 4-4 4"/>
+            </svg>
+          </div>
+          <div class="day-body">
+            <div class="activity-list">
+              <div class="activity-item">
+                <div class="activity-time">08:00</div>
+                <div class="activity-dot dot-teal"></div>
+                <div class="activity-content">
+                  <div class="activity-name">⛵ 皮皮岛一日游出发</div>
+                  <div class="activity-desc">从芭东海滩码头出发（含接送），快船约45分钟抵达皮皮岛。</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-time">上午</div>
+                <div class="activity-dot dot-teal"></div>
+                <div class="activity-content">
+                  <div class="activity-name">🌊 玛雅湾（Maya Bay）</div>
+                  <div class="activity-desc">电影《海滩》取景地，2022年底重新开放，限流保护。石灰岩山壁环绕，海水清澈见底。</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-time">上午</div>
+                <div class="activity-dot dot-teal"></div>
+                <div class="activity-content">
+                  <div class="activity-name">🐒 猴子海滩 + 浮潜</div>
+                  <div class="activity-desc">近距离接触野生猕猴（勿喂食）。途中在珊瑚礁区停留浮潜，能见热带鱼群。</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-time">17:00</div>
+                <div class="activity-dot dot-orange"></div>
+                <div class="activity-content">
+                  <div class="activity-name">🌅 返回 → Promthep Cape 看日落</div>
+                  <div class="activity-desc">返回后打 Grab 前往普姆提甲（岛最南端），无遮挡180°海景，是普吉岛最美日落机位。</div>
+                </div>
+              </div>
+            </div>
+            <div style="margin-top:16px">
+              <div class="tip-box">
+                <strong>预订提醒：</strong>五一旺季热门路线，必须提前1–2天预订（推荐通过酒店前台或 Klook）。费用约 1200–1800 泰铢/人（含船票、午餐、浮潜装备）。
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 7 -->
+        <div class="day-card">
+          <div class="day-header" onclick="toggleDay(this)">
+            <div class="day-number c-purple">D7</div>
+            <div>
+              <div class="day-date">5月9日（周五）</div>
+              <div class="day-title">普吉老镇漫步 → 飞回曼谷</div>
+            </div>
+            <span class="day-tag tag-purple">普吉→曼谷</span>
+            <svg class="day-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 4l4 4-4 4"/>
+            </svg>
+          </div>
+          <div class="day-body">
+            <div class="activity-list">
+              <div class="activity-item">
+                <div class="activity-time">09:00</div>
+                <div class="activity-dot dot-purple"></div>
+                <div class="activity-content">
+                  <div class="activity-name">🏘️ 普吉镇（Phuket Old Town）</div>
+                  <div class="activity-desc">19世纪葡萄牙-华人风格骑楼，粉彩墙面超出片。本头公巷（Soi Romanee）网红粉红小巷壁画打卡，Thalang Road 彩色街屋。</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-time">10:00</div>
+                <div class="activity-dot dot-orange"></div>
+                <div class="activity-content">
+                  <div class="activity-name">☕ 早午餐 · Tu Kab Khao / Kopitiam</div>
+                  <div class="activity-desc">Tu Kab Khao：泰南精致料理，咖喱蟹、海南鸡饭。或在老镇 Kopitiam（南洋咖啡馆）喝古法拉咖、配马来叉烧包。</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-time">14:00</div>
+                <div class="activity-dot dot-gray"></div>
+                <div class="activity-content">
+                  <div class="activity-name">🧳 返回芭东 · 收拾行李</div>
+                  <div class="activity-desc">不建议再安排其他活动，时间较紧。建议 16:00 前出发打车前往普吉机场（约50分钟）。</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-time">19:35</div>
+                <div class="activity-dot dot-purple"></div>
+                <div class="activity-content">
+                  <div class="activity-name">✈️ 飞回曼谷素万那普（21:05抵达）</div>
+                  <div class="activity-desc">落地后在机场餐厅用晚餐，等待 5/10 凌晨 01:50 国际航班起飞。</div>
+                </div>
+              </div>
+            </div>
+            <div style="margin-top:16px">
+              <div class="tip-box">
+                <strong>注意：</strong>普吉→曼谷落地素万那普机场，01:50 国际航班也在素万那普，无需换航站楼。机场内候机即可，安全省心。
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 8 -->
+        <div class="day-card">
+          <div class="day-header" onclick="toggleDay(this)">
+            <div class="day-number c-gray">D8</div>
+            <div>
+              <div class="day-date">5月10日（周六）</div>
+              <div class="day-title">返程 · 北京见！</div>
+            </div>
+            <span class="day-tag" style="background:var(--surface-3);color:var(--label-2)">返程</span>
+            <svg class="day-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 4l4 4-4 4"/>
+            </svg>
+          </div>
+          <div class="day-body">
+            <div class="activity-list">
+              <div class="activity-item">
+                <div class="activity-time">01:50</div>
+                <div class="activity-dot dot-gray"></div>
+                <div class="activity-content">
+                  <div class="activity-name">✈️ 曼谷素万那普起飞</div>
+                  <div class="activity-desc">中转厦门，停留约2.5小时</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-time">12:00</div>
+                <div class="activity-dot dot-blue"></div>
+                <div class="activity-content">
+                  <div class="activity-name">🏠 北京抵达</div>
+                  <div class="activity-desc">满载着冬阴功的回忆和 AOW 潜水证书归来！</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /timeline -->
+    </section>
+
+    <!-- Food -->
+    <section class="section">
+      <h2 class="section-title">
+        <span class="section-title-icon">🍜</span>
+        必吃美食
+      </h2>
+      <div class="food-section">
+        <div>
+          <div class="food-city-title">🏙️ 曼谷</div>
+          <div class="food-grid">
+            <div class="food-card">
+              <div class="food-emoji">🍜</div>
+              <div class="food-name">泰式炒河粉</div>
+              <div class="food-name-th">Pad Thai</div>
+              <div class="food-where">JODD FAIRS 夜市</div>
+              <span class="food-price">60–80 ฿</span>
+            </div>
+            <div class="food-card">
+              <div class="food-emoji">🍲</div>
+              <div class="food-name">冬阴功汤</div>
+              <div class="food-name-th">Tom Yum</div>
+              <div class="food-where">朱拉隆功夜市</div>
+              <span class="food-price">80–120 ฿</span>
+            </div>
+            <div class="food-card">
+              <div class="food-emoji">🥭</div>
+              <div class="food-name">芒果糯米饭</div>
+              <div class="food-name-th">Khao Niao Mamuang</div>
+              <div class="food-where">Mango Tango</div>
+              <span class="food-price">80–150 ฿</span>
+            </div>
+            <div class="food-card">
+              <div class="food-emoji">🥥</div>
+              <div class="food-name">椰子冰淇淋</div>
+              <div class="food-name-th">Coconut Ice Cream</div>
+              <div class="food-where">乍都乍市场</div>
+              <span class="food-price">50–70 ฿</span>
+            </div>
+            <div class="food-card">
+              <div class="food-emoji">🍖</div>
+              <div class="food-name">猪脚饭</div>
+              <div class="food-name-th">Khao Kha Moo</div>
+              <div class="food-where">JODD FAIRS</div>
+              <span class="food-price">50–80 ฿</span>
+            </div>
+            <div class="food-card">
+              <div class="food-emoji">🍞</div>
+              <div class="food-name">蜜糖吐司</div>
+              <div class="food-name-th">Honey Toast</div>
+              <div class="food-where">After You Dessert</div>
+              <span class="food-price">150–200 ฿</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="food-city-title">🌊 普吉岛</div>
+          <div class="food-grid">
+            <div class="food-card">
+              <div class="food-emoji">🦞</div>
+              <div class="food-name">烤海鲜拼盘</div>
+              <div class="food-name-th">Grilled Seafood</div>
+              <div class="food-where">芭东海鲜餐厅</div>
+              <span class="food-price">500–1000 ฿/桌</span>
+            </div>
+            <div class="food-card">
+              <div class="food-emoji">🦀</div>
+              <div class="food-name">泰南咖喱蟹</div>
+              <div class="food-name-th">Phuket Curry Crab</div>
+              <div class="food-where">Tu Kab Khao · 老镇</div>
+              <span class="food-price">400–600 ฿</span>
+            </div>
+            <div class="food-card">
+              <div class="food-emoji">🍛</div>
+              <div class="food-name">菠萝炒饭</div>
+              <div class="food-name-th">Khao Op Sapparod</div>
+              <div class="food-where">海鲜餐厅</div>
+              <span class="food-price">150–200 ฿</span>
+            </div>
+            <div class="food-card">
+              <div class="food-emoji">☕</div>
+              <div class="food-name">南洋古法咖啡</div>
+              <div class="food-name-th">Kopitiam Coffee</div>
+              <div class="food-where">普吉老镇咖啡馆</div>
+              <span class="food-price">40–60 ฿</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photo Spots -->
+    <section class="section">
+      <h2 class="section-title">
+        <span class="section-title-icon">📸</span>
+        打卡拍照机位
+      </h2>
+      <div class="spots-grid">
+        <div class="spot-card">
+          <div class="spot-cover" style="background: linear-gradient(135deg,#f093fb,#f5576c)">🛕</div>
+          <div class="spot-body">
+            <div class="spot-name">湄南河东岸望郑王庙</div>
+            <div class="spot-time">日落前1小时（约 17:30）</div>
+            <div class="spot-desc">夕阳余晖下的黎明寺全景倒影，橙粉色天空绝美</div>
+          </div>
+        </div>
+        <div class="spot-card">
+          <div class="spot-cover" style="background: linear-gradient(135deg,#f6d365,#fda085)">⛰️</div>
+          <div class="spot-body">
+            <div class="spot-name">金山寺塔顶全景</div>
+            <div class="spot-time">黄昏（17:00–18:00）</div>
+            <div class="spot-desc">曼谷老城区360°俯拍，灯光亮起后氛围更佳</div>
+          </div>
+        </div>
+        <div class="spot-card">
+          <div class="spot-cover" style="background: linear-gradient(135deg,#a18cd1,#fbc2eb)">🎪</div>
+          <div class="spot-body">
+            <div class="spot-name">JODD FAIRS 彩色帐篷</div>
+            <div class="spot-time">入夜后（18:30+）</div>
+            <div class="spot-desc">五彩灯光夜市街景，人来人往，烟火气十足</div>
+          </div>
+        </div>
+        <div class="spot-card">
+          <div class="spot-cover" style="background: linear-gradient(135deg,#0096c7,#023e8a)">🌊</div>
+          <div class="spot-body">
+            <div class="spot-name">皮皮岛玛雅湾</div>
+            <div class="spot-time">上午（09:00–11:00）</div>
+            <div class="spot-desc">石灰岩悬崖 + 碧蓝海湾，《海滩》原景地</div>
+          </div>
+        </div>
+        <div class="spot-card">
+          <div class="spot-cover" style="background: linear-gradient(135deg,#f9ca24,#f0932b)">🏘️</div>
+          <div class="spot-body">
+            <div class="spot-name">普吉老镇彩色骑楼</div>
+            <div class="spot-time">上午（08:00–10:00）</div>
+            <div class="spot-desc">本头公巷粉红小巷壁画，早上人少光线好</div>
+          </div>
+        </div>
+        <div class="spot-card">
+          <div class="spot-cover" style="background: linear-gradient(135deg,#ff6b6b,#feca57)">🌅</div>
+          <div class="spot-body">
+            <div class="spot-name">普姆提甲（Promthep Cape）</div>
+            <div class="spot-time">日落前30分钟</div>
+            <div class="spot-desc">普吉岛最南端，无遮挡180°海景日落，全岛最佳日落机位</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tips -->
+    <section class="section">
+      <h2 class="section-title">
+        <span class="section-title-icon">💡</span>
+        实用 Tips
+      </h2>
+      <div class="tips-grid">
+        <div class="tips-card">
+          <div class="tips-icon">✈️</div>
+          <div class="tips-title">签证 & 入境</div>
+          <ul class="tips-list">
+            <li>中国护照泰国免签 60 天（2025年政策）</li>
+            <li>需携带回程机票 + 住宿确认</li>
+            <li>建议备足资金证明</li>
+            <li>入境不填写出入境卡</li>
+          </ul>
+        </div>
+        <div class="tips-card">
+          <div class="tips-icon">📱</div>
+          <div class="tips-title">通讯 & App</div>
+          <ul class="tips-list">
+            <li>落地机场买 True Move / AIS SIM（200–350泰铢/8–15天无限流量）</li>
+            <li>支持 eSIM 可提前在 Airalo 购买</li>
+            <li>Grab App：打车/外卖必备</li>
+            <li>Google Maps 提前下载离线地图</li>
+          </ul>
+        </div>
+        <div class="tips-card">
+          <div class="tips-icon">🌧️</div>
+          <div class="tips-title">天气 & 穿着</div>
+          <ul class="tips-list">
+            <li>5月雨季初期，午后可能有阵雨</li>
+            <li>曼谷 30–36°C，薄透气衣物 + 防晒</li>
+            <li>普吉 28–33°C，海风凉，带薄外套</li>
+            <li>折叠雨伞 / 雨衣 + 防晒 SPF50+ + 防蚊</li>
+          </ul>
+        </div>
+        <div class="tips-card">
+          <div class="tips-icon">💰</div>
+          <div class="tips-title">货币 & 消费</div>
+          <ul class="tips-list">
+            <li>泰铢（THB），建议出发前兑换或落地 ATM 取款</li>
+            <li>Wise / Revolut 多币种卡可用</li>
+            <li>街边餐：60–150泰铢/餐</li>
+            <li>餐厅：200–600泰铢/人</li>
+          </ul>
+        </div>
+        <div class="tips-card">
+          <div class="tips-icon">🛕</div>
+          <div class="tips-title">寺庙礼仪</div>
+          <ul class="tips-list">
+            <li>进入寺庙须脱鞋、遮肩遮腿</li>
+            <li>禁止触摸僧侣（女性尤其注意）</li>
+            <li>不评价王室（泰国法律严厉）</li>
+            <li>顺时针绕行参拜</li>
+          </ul>
+        </div>
+        <div class="tips-card">
+          <div class="tips-icon">🚗</div>
+          <div class="tips-title">交通提醒</div>
+          <ul class="tips-list">
+            <li>廊曼（DMK）≠ 素万那普（BKK），注意机场</li>
+            <li>BTS 单程 16–59 泰铢</li>
+            <li>湄南河快船：前往大皇宫的好选择</li>
+            <li>5/9 返曼谷后直接在素万那普候机</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>泰国 · 曼谷 + 普吉岛 · 2025年5月</p>
+      <p style="margin-top:4px">由 AI 辅助生成 · <a href="../../docs/index.html" style="color:var(--label-3)">x-travel</a></p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleDay(header) {
+      const body = header.nextElementSibling;
+      const isOpen = header.classList.contains('open');
+      header.classList.toggle('open', !isOpen);
+      body.classList.toggle('open', !isOpen);
+    }
+
+    // Open first day by default
+    document.addEventListener('DOMContentLoaded', () => {
+      // First day is already open via HTML class
+    });
+  </script>
+
+</body>
+</html>
